@@ -32,3 +32,6 @@ RUN ( ( printf '/"target":/c\n  "target": "esnext",\n.\n' ;\
 FROM base as release
 COPY ./src .
 RUN npm run build
+
+FROM release as production
+RUN rm -rf ./src
