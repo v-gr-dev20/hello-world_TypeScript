@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  typescript-node-docker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: release
