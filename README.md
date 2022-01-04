@@ -2,6 +2,9 @@
 
 [MIT License](LICENSE)
 
+### Build & test
+[![Build status](https://ci.appveyor.com/api/projects/status/pmnn11kr7q7l4h61?svg=true)](https://ci.appveyor.com/project/v-gr-dev20/hello-world-typescript)
+
 ### Prerequisites
 git - to get the project\
 Docker & Docker Compose - to build the project and run\

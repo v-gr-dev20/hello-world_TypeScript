@@ -1,0 +1,25 @@
+version: 1.0.{build}
+image:
+  - Ubuntu2004
+branches:
+  only:
+  - master
+platform: x64
+
+init:
+  - appveyor version
+
+build_script:
+  - sh:  |
+         make build
+         make production
+
+test_script:
+  - sh:  |
+         make up
+         sleep 1
+         output=$( curl -s http://127.0.0.1:3000 )
+         echo $output
+         test "Hello, World!" == "$output" \
+         || exit 1
+         make down
